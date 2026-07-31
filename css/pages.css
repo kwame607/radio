@@ -107,12 +107,10 @@
 .ad-adonko .ad-brand-mark{ background:#f4c430; color:#7a1220; }
 .ad-mtn{ background:linear-gradient(120deg,#ffcb05,#ffe066); color:#1a1a1a; }
 .ad-mtn .ad-brand-mark{ background:#1a1a1a; color:#ffcb05; }
-.ad-telecel{ background:linear-gradient(120deg,#8a1538,#c41e4f); color:#fff; }
-.ad-telecel .ad-brand-mark{ background:#fff; color:#8a1538; }
 .ad-kasapreko{ background:linear-gradient(120deg,#0b3d2e,#146b4f); color:#fff; }
 .ad-kasapreko .ad-brand-mark{ background:#f4c430; color:#0b3d2e; }
-.ad-voltic{ background:linear-gradient(120deg,#004c97,#0077c8); color:#fff; }
-.ad-voltic .ad-brand-mark{ background:#fff; color:#004c97; }
+.ad-taabea{ background:linear-gradient(120deg,#4a2c14,#8a5a2b); color:#fff; }
+.ad-taabea .ad-brand-mark{ background:#e8d9b5; color:#4a2c14; }
 
 /* ---------- Newsletter ---------- */
 .newsletter-block{

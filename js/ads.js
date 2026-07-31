@@ -26,14 +26,6 @@
       cta: "Explore Offers",
     },
     {
-      cls: "ad-telecel",
-      mark: "T",
-      tag: "Sponsored",
-      title: "Telecel Ghana",
-      body: "Data, talk-time and more — bundles built for how you actually live.",
-      cta: "See Bundles",
-    },
-    {
       cls: "ad-kasapreko",
       mark: "K",
       tag: "Sponsored",
@@ -42,12 +34,12 @@
       cta: "Our Products",
     },
     {
-      cls: "ad-voltic",
-      mark: "V",
+      cls: "ad-taabea",
+      mark: "TB",
       tag: "Sponsored",
-      title: "Voltic Ghana",
-      body: "Pure. Refreshing. Trusted. Stay hydrated with Voltic every day.",
-      cta: "Find a Store",
+      title: "Taabea",
+      body: "Trusted herbal medicine, proudly made in Kumasi since 2008.",
+      cta: "Our Products",
     },
   ];
 
