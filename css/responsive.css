@@ -22,13 +22,14 @@
   .footer-grid{ grid-template-columns:1fr 1fr; row-gap:32px; }
   .listen-split{ grid-template-columns:1fr; }
   .presenter-featured{ grid-template-columns:1fr; }
+  .grid-3, .grid-4, .latest-news-grid{ grid-template-columns:repeat(2,1fr); }
 }
 
 /* ----- Mobile ----- */
 @media (max-width:767px){
   :root{ --header-h:66px; }
   .brand-text{ display:none; }
-  .grid-3, .grid-4{ grid-template-columns:1fr 1fr; }
+  .grid-3, .grid-4, .latest-news-grid{ grid-template-columns:1fr; }
   .section-head{ flex-direction:column; align-items:flex-start; }
   section{ padding:44px 0; }
   .footer-grid{ grid-template-columns:1fr; }
@@ -65,7 +66,7 @@
 
 /* ----- Small Mobile ----- */
 @media (max-width:479px){
-  .grid-3, .grid-4, .presenter-grid{ grid-template-columns:1fr; }
+  .grid-3, .grid-4, .presenter-grid, .latest-news-grid{ grid-template-columns:1fr; }
   .hero h1{ font-size:34px; }
   .container{ padding:0 16px; }
   .dial{ width:140px; height:140px; }

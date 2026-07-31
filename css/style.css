@@ -264,6 +264,14 @@ section{ padding:64px 0; }
 .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in{ opacity:1; transform:translateY(0); }
 
+/* Staggered cascade for card grids — each card reveals slightly after the previous one */
+.grid-3 .card:nth-child(1), .grid-4 .card:nth-child(1), .latest-news-grid .card:nth-child(1), .presenter-grid .presenter-card:nth-child(1){ transition-delay:0s; }
+.grid-3 .card:nth-child(2), .grid-4 .card:nth-child(2), .latest-news-grid .card:nth-child(2), .presenter-grid .presenter-card:nth-child(2){ transition-delay:.08s; }
+.grid-3 .card:nth-child(3), .grid-4 .card:nth-child(3), .latest-news-grid .card:nth-child(3), .presenter-grid .presenter-card:nth-child(3){ transition-delay:.16s; }
+.grid-3 .card:nth-child(4), .grid-4 .card:nth-child(4), .latest-news-grid .card:nth-child(4), .presenter-grid .presenter-card:nth-child(4){ transition-delay:.24s; }
+.grid-3 .card:nth-child(5), .presenter-grid .presenter-card:nth-child(5){ transition-delay:.32s; }
+.grid-3 .card:nth-child(6), .presenter-grid .presenter-card:nth-child(6){ transition-delay:.4s; }
+
 /* ---------- Frequency dial signature element ---------- */
 .dial{
   position:relative; width:180px; height:180px; border-radius:50%;

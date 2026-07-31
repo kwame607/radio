@@ -74,8 +74,9 @@
 /* ---------- Ad slot carousel (placeholder sponsor creative) ---------- */
 .ad-slot{
   position:relative; border-radius:var(--radius-md); overflow:hidden; min-height:120px;
-  display:flex; align-items:center; box-shadow:var(--shadow-sm);
+  display:flex; align-items:center; box-shadow:var(--shadow-md); border:1px solid var(--line);
 }
+.ad-slot::before{ content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--gold),var(--red)); z-index:3; }
 .ad-slot.ad-sidebar-slot{ min-height:280px; flex-direction:column; justify-content:center; text-align:center; padding:28px 22px; }
 .ad-slot-label{
   position:absolute; top:10px; left:10px; font-family:var(--font-mono); font-size:9.5px; letter-spacing:.1em;
@@ -143,6 +144,7 @@
 .cat-btn.active{ background:var(--red); color:#fff; border-color:var(--red); }
 
 .news-layout{ display:grid; grid-template-columns:2fr 1fr; gap:40px; align-items:start; }
+.latest-news-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
 .article-row{ display:grid; grid-template-columns:220px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--line); }
 .article-row .card-media{ border-radius:var(--radius-sm); aspect-ratio:4/3; }
 .article-row h3{ font-size:19px; margin-bottom:6px; }
