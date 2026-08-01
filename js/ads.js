@@ -1,7 +1,7 @@
 /* ============================================================
    ANGEL 96.1FM — AD SLOTS
    NOTE: Logo images are real files provided by the site owner
-   (images/ads/). Copy/pricing/links below are still placeholder
+   (images/). Copy/pricing/links below are still placeholder
    until real ad agreements are signed — swap those before launch.
    ============================================================ */
 (function () {
@@ -10,7 +10,7 @@
   const ADS = [
     {
       cls: "ad-adonko",
-      logo: "images/ads/adonko.jpeg",
+      logo: "images/adonko.jpeg",
       tag: "Sponsored",
       title: "Adonko Bitters",
       body: "The taste that stands the test of time. Available at stores nationwide.",
@@ -18,7 +18,7 @@
     },
     {
       cls: "ad-mtn",
-      logo: "images/ads/mtn.jpg",
+      logo: "images/mtn.jpg",
       tag: "Sponsored",
       title: "MTN Ghana",
       body: "Everywhere you go, stay connected with the best network for you.",
@@ -26,7 +26,7 @@
     },
     {
       cls: "ad-kasapreko",
-      logo: "images/ads/kasapreko.png",
+      logo: "images/kasapreko.png",
       tag: "Sponsored",
       title: "Kasapreko",
       body: "Proudly Ghanaian since 1989 — quality drinks for every occasion.",
@@ -34,7 +34,7 @@
     },
     {
       cls: "ad-taabea",
-      logo: "images/ads/taabea.jpeg",
+      logo: "images/taabea.jpeg",
       tag: "Sponsored",
       title: "Taabea",
       body: "Trusted herbal medicine, proudly made in Kumasi since 2008.",
