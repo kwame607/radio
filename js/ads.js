@@ -1,9 +1,8 @@
 /* ============================================================
    ANGEL 96.1FM — AD SLOTS
-   NOTE: The brand names/creative below are MOCKUP PLACEHOLDERS
-   to show how sponsor slots would look and rotate. Swap in real
-   paid-advertiser creative (and signed agreements) before launch —
-   don't ship real brand names without their sign-off.
+   NOTE: Logo images are real files provided by the site owner
+   (images/ads/). Copy/pricing/links below are still placeholder
+   until real ad agreements are signed — swap those before launch.
    ============================================================ */
 (function () {
   "use strict";
@@ -11,7 +10,7 @@
   const ADS = [
     {
       cls: "ad-adonko",
-      mark: "AB",
+      logo: "images/ads/adonko.jpeg",
       tag: "Sponsored",
       title: "Adonko Bitters",
       body: "The taste that stands the test of time. Available at stores nationwide.",
@@ -19,7 +18,7 @@
     },
     {
       cls: "ad-mtn",
-      mark: "MTN",
+      logo: "images/ads/mtn.jpg",
       tag: "Sponsored",
       title: "MTN Ghana",
       body: "Everywhere you go, stay connected with the best network for you.",
@@ -27,7 +26,7 @@
     },
     {
       cls: "ad-kasapreko",
-      mark: "K",
+      logo: "images/ads/kasapreko.png",
       tag: "Sponsored",
       title: "Kasapreko",
       body: "Proudly Ghanaian since 1989 — quality drinks for every occasion.",
@@ -35,7 +34,7 @@
     },
     {
       cls: "ad-taabea",
-      mark: "TB",
+      logo: "images/ads/taabea.jpeg",
       tag: "Sponsored",
       title: "Taabea",
       body: "Trusted herbal medicine, proudly made in Kumasi since 2008.",
@@ -55,7 +54,7 @@
       const slide = document.createElement("div");
       slide.className = `ad-slide ${ad.cls}` + (i === 0 ? " active" : "");
       slide.innerHTML = `
-        <div class="ad-brand-mark">${ad.mark}</div>
+        <div class="ad-brand-mark"><img src="${ad.logo}" alt="${ad.title} logo" loading="lazy" /></div>
         <div class="ad-copy">
           <span class="ad-tag">${ad.tag}</span>
           <h4>${ad.title}</h4>
@@ -64,6 +63,14 @@
         ${isSidebar ? "" : `<a href="#" class="btn btn-sm" style="background:rgba(255,255,255,.18);color:inherit;flex-shrink:0;">${ad.cta}</a>`}
       `;
       container.appendChild(slide);
+    });
+
+    // Guard against a logo image failing to load — fall back to a plain colored badge
+    container.querySelectorAll(".ad-brand-mark img").forEach((img) => {
+      img.addEventListener("error", function handler() {
+        img.removeEventListener("error", handler);
+        img.style.display = "none";
+      });
     });
 
     const dots = document.createElement("div");

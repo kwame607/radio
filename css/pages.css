@@ -56,7 +56,12 @@
 /* ---------- Live Now ---------- */
 .live-now{ background:linear-gradient(135deg, var(--ink) 0%, #1c1c1f 100%); color:var(--text-on-ink); border-radius:var(--radius-lg); padding:40px; }
 .live-now-grid{ display:grid; grid-template-columns:auto 1fr auto; gap:32px; align-items:center; }
-.live-now-art{ width:110px; height:110px; border-radius:var(--radius-md); background:linear-gradient(135deg,var(--red),var(--gold)); display:flex; align-items:center; justify-content:center; }
+.live-now-art{
+  width:110px; height:110px; border-radius:var(--radius-md); background:var(--ink); flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+  border:1px solid rgba(255,255,255,.12); box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+.live-now-art img{ width:100%; height:100%; object-fit:cover; }
 .live-now-info .show-name{ font-size:24px; margin:10px 0 4px; }
 .live-now-info .host{ color:var(--text-on-ink-muted); font-size:14.5px; }
 .live-now-stats{ display:flex; gap:28px; align-items:center; }
@@ -90,9 +95,10 @@
 .ad-sidebar-slot .ad-slide{ flex-direction:column; justify-content:center; text-align:center; padding:28px 22px; }
 .ad-brand-mark{
   width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-weight:800; font-size:20px; flex-shrink:0; color:#fff;
+  flex-shrink:0; background:#fff; padding:8px; box-shadow:0 2px 8px rgba(0,0,0,.15); overflow:hidden;
 }
-.ad-sidebar-slot .ad-brand-mark{ width:64px; height:64px; margin-bottom:14px; font-size:22px; }
+.ad-brand-mark img{ width:100%; height:100%; object-fit:contain; }
+.ad-sidebar-slot .ad-brand-mark{ width:72px; height:72px; margin-bottom:14px; padding:10px; }
 .ad-copy{ flex:1; min-width:0; }
 .ad-copy .ad-tag{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; opacity:.75; }
 .ad-copy h4{ font-size:17px; margin:4px 0 4px; }
@@ -102,15 +108,12 @@
 .ad-dots button{ width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,.5); border:none; padding:0; }
 .ad-dots button.active{ background:#fff; width:16px; border-radius:4px; transition:width .3s var(--ease); }
 
-/* Brand palettes — used only as mockup placeholders for local sponsor slots */
+/* Brand background colors — real logos supplied by the site owner sit in a
+   white badge on top, so these just set the surrounding card color per brand */
 .ad-adonko{ background:linear-gradient(120deg,#7a1220,#b3182b); color:#fff; }
-.ad-adonko .ad-brand-mark{ background:#f4c430; color:#7a1220; }
 .ad-mtn{ background:linear-gradient(120deg,#ffcb05,#ffe066); color:#1a1a1a; }
-.ad-mtn .ad-brand-mark{ background:#1a1a1a; color:#ffcb05; }
 .ad-kasapreko{ background:linear-gradient(120deg,#0b3d2e,#146b4f); color:#fff; }
-.ad-kasapreko .ad-brand-mark{ background:#f4c430; color:#0b3d2e; }
 .ad-taabea{ background:linear-gradient(120deg,#4a2c14,#8a5a2b); color:#fff; }
-.ad-taabea .ad-brand-mark{ background:#e8d9b5; color:#4a2c14; }
 
 /* ---------- Newsletter ---------- */
 .newsletter-block{
@@ -269,7 +272,11 @@
   0%{ transform:scale(.9); opacity:.7; }
   100%{ transform:scale(1.9); opacity:0; }
 }
-.player-art{ width:76px; height:76px; border-radius:14px; background:linear-gradient(135deg,var(--red),var(--gold)); flex-shrink:0; position:relative; z-index:2; }
+.player-art{
+  width:76px; height:76px; border-radius:14px; background:var(--ink); flex-shrink:0; position:relative; z-index:2;
+  overflow:hidden; border:1px solid rgba(255,255,255,.12); box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+.player-art img{ width:100%; height:100%; object-fit:cover; }
 .player-location{ display:inline-flex; align-items:center; gap:5px; }
 .player-track h4{ font-size:18px; }
 .player-track p{ color:var(--text-on-ink-muted); font-size:13.5px; margin-top:2px; }

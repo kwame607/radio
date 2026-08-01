@@ -176,6 +176,17 @@
     }, 4000);
   }
 
+  /* ---------- Image fallback safety net ----------
+     If any image fails to load (dead link, hotlink block, offline, etc.),
+     hide the broken image and let the parent's branded placeholder background show instead. */
+  document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("error", function handler() {
+      img.removeEventListener("error", handler);
+      img.style.display = "none";
+      img.closest(".card-media, .ad-brand-mark, .player-art, .live-now-art")?.classList.add("img-fallback");
+    });
+  });
+
   /* ---------- Weather widget (mock — no external API) ---------- */
   const weatherTemp = document.querySelector("[data-weather-temp]");
   if (weatherTemp) {
